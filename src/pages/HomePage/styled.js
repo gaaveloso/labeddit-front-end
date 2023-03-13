@@ -16,7 +16,7 @@ export const Container = styled.main`
 export const PostContainer = styled.div`
     display: flex;
     height: 250px;
-
+    margin-top: 10px;
     input {
         width: 364px;
         height: 131px;

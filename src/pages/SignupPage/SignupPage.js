@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/url";
 import { goToHomePage, goToLoginPage } from "../../routes/coordinator";
 import logo_header from "../../img/labeddit-logo-header.png"
-import { Checkbox, Container, ContainerSelection, DivButton, DivStyled, Header, Input } from "./styled";
+import { Checkbox, Container, ContainerSelection, DivButton, DivStyled, Input } from "./styled";
+import { Header } from "../../components/Header/Header";
 
 export const SignupPage = () => {
   const navigate = useNavigate();
@@ -53,6 +54,7 @@ export const SignupPage = () => {
 
   return (
     <Container>
+      <Header />
       <ContainerSelection>
         <h1>Olá, boas vindas ao LabEddit ;)</h1>
 

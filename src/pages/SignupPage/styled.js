@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -13,7 +14,7 @@ export const ContainerSelection = styled.section`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 100vh;
+  height: 93vh;
   padding: 10px;
 
   h1 {

@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useContext } from "react";
-import { GlobalContext } from "../contexts/GlobalContext";
-import { BASE_URL } from "../constants/url";
-import arrowUp from "../img/arrow-up.png";
-import arrowDown from "../img/arrow-down.png";
-import baloon from "../img/baloon.png";
+import { GlobalContext } from "../../contexts/GlobalContext";
+import { BASE_URL } from "../../constants/url";
+import arrowUp from "../../img/arrow-up.png";
+import arrowDown from "../../img/arrow-down.png";
+import baloon from "../../img/baloon.png";
 import {
   Comments,
   ContainerCard, DivLikeComments, LikeDislike

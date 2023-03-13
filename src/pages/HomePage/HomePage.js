@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { PostCard } from "../../components/PostCard";
+import { PostCard } from "../../components/Card/PostCard";
 import { BASE_URL } from "../../constants/url";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { goToLoginPage } from "../../routes/coordinator";
 import { Container, PostContainer } from "./styled";
-
+import { Header } from "../../components/Header/Header"
 export const HomePage = () => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
@@ -48,6 +48,7 @@ export const HomePage = () => {
   };
   return (
     <Container>
+    <Header />
     <PostContainer>
       <form onSubmit={createPost}>
         <section>
