@@ -9,3 +9,7 @@ export const goToSignupPage = (navigate) => {
 export const goToLoginPage = (navigate) => {
   navigate("/login");
 };
+
+export const goToCommentPage = (navigate, id) => {
+  navigate(`/posts/comment/${id}`);
+};

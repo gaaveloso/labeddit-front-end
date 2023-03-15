@@ -12,12 +12,12 @@ import {
 import { goToCommentPage } from "../../routes/coordinator";
 import { useNavigate } from "react-router-dom";
 
-export const PostCard = (props) => {
-  const { post } = props;
+export const CommentCard = (props) => {
+  const { comment, fetchComments } = props;
   const navigate = useNavigate();
 
   const context = useContext(GlobalContext);
-  const { fetchPosts } = context;
+
 
   const like = async () => {
     try {
@@ -25,13 +25,13 @@ export const PostCard = (props) => {
         like: true,
       };
 
-      await axios.put(BASE_URL + `/posts/${post.id}/like`, body, {
+      await axios.put(BASE_URL + `/posts/comment/${comment.id}/like`, body, {
         headers: {
           Authorization: window.localStorage.getItem("Labeddit Token"),
         },
       });
 
-      fetchPosts();
+      fetchComments();
     } catch (error) {
       console.error(error?.response?.data);
       window.alert(error?.response?.data);
@@ -44,13 +44,13 @@ export const PostCard = (props) => {
         like: false,
       };
 
-      await axios.put(BASE_URL + `/posts/${post.id}/like`, body, {
+      await axios.put(BASE_URL + `/posts/comment/${comment.id}/like`, body, {
         headers: {
           Authorization: window.localStorage.getItem("Labeddit Token"),
         },
       });
 
-      fetchPosts();
+      fetchComments();
     } catch (error) {
       console.error(error?.response?.data);
       window.alert(error?.response?.data);
@@ -59,25 +59,19 @@ export const PostCard = (props) => {
   
   return (
     <ContainerCard>
-      <p>Enviado por: {post.creator.name}</p>
-      <h1>{post.content}</h1>
+      <p>Enviado por: {comment.creator.name}</p>
+      <h1>{comment.content}</h1>
       <DivLikeComments>
       <LikeDislike>
       <span onClick={like}>
         <img src={arrowUp} />
-        {post.likes}
+        {comment.likes}
       </span>
       <span onClick={dislike}>
       <img src={arrowDown} />
-        {post.dislikes}
+        {comment.dislikes}
       </span>
       </LikeDislike>
-      <Comments>
-      <span>
-      <img src={baloon} onClick={() => goToCommentPage(navigate, post.id)}/>
-      </span>
-      ??
-      </Comments>
       </DivLikeComments>
     </ContainerCard>
   );

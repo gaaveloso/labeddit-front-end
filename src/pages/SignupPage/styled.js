@@ -80,6 +80,7 @@ export const DivStyled = styled.div`
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
+    cursor: pointer;
   }
 `;
 

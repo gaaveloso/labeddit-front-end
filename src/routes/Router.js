@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CommentsPage } from "../pages/CommentsPage/CommentsPage";
 import {HomePage} from "../pages/HomePage/HomePage";
 import {LoginPage} from "../pages/LoginPage/LoginPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
@@ -11,6 +12,7 @@ export default function Router() {
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/posts/comment/:postId" element={<CommentsPage />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

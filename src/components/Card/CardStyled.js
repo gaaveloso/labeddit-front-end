@@ -9,6 +9,7 @@ export const ContainerCard = styled.main`
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   padding-left: 15px;
+  margin-top: 10px;
 `;
 
 export const LikeDislike = styled.div`

@@ -11,9 +11,8 @@ export const HomePage = () => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
   const { posts, fetchPosts } = context;
-  const { content, setContent } = useState("");
+  const [ content, setContent ] = useState("");
 
-  console.log(posts);
 
   useEffect(() => {
     const token = window.localStorage.getItem("Labeddit Token");
@@ -33,7 +32,7 @@ export const HomePage = () => {
         content: content,
       };
 
-      await axios.get(BASE_URL + "/posts", body, {
+      await axios.post(BASE_URL + "/posts", body, {
         headers: {
           Authorization: window.localStorage.getItem("Labeddit Token"),
         },
@@ -45,6 +44,7 @@ export const HomePage = () => {
       console.error(error?.response?.data);
       window.alert(error?.response?.data);
     }
+
   };
   return (
     <Container>
@@ -64,7 +64,7 @@ export const HomePage = () => {
 
 
     <section>
-      {posts.map((post) => {
+      {posts && posts.map((post) => {
         return <PostCard key={post.id} post={post} />;
       })}
     </section>

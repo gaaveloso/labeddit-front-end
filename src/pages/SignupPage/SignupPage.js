@@ -9,7 +9,6 @@ import { Header } from "../../components/Header/Header";
 
 export const SignupPage = () => {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -29,9 +28,8 @@ export const SignupPage = () => {
   const signup = async (event) => {
     event.preventDefault();
 
-    if (form.password === form.passwordConfirmation) {
+    
       try {
-        setIsLoading(true);
 
         const body = {
           name: form.name,
@@ -41,15 +39,12 @@ export const SignupPage = () => {
 
         const response = await axios.post(BASE_URL + "/users/signup", body);
         window.localStorage.setItem("Labeddit Token", response.data.token);
-
-        setIsLoading(false);
         goToHomePage(navigate);
       } catch (error) {
-        setIsLoading(false);
         console.error(error?.response?.data);
         window.alert(error?.response?.data);
       }
-    }
+    
   };
 
   return (
@@ -112,7 +107,7 @@ export const SignupPage = () => {
             </Checkbox>
             </div>
             <DivButton>
-            <button disabled={isLoading}>Cadastrar</button>
+            <button>Cadastrar</button>
             </DivButton>
             </DivStyled>
           </form>
