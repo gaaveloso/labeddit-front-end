@@ -63,6 +63,7 @@ export const PostCard = (props) => {
       <h1>{post.content}</h1>
       <DivLikeComments>
       <LikeDislike>
+        
       <span onClick={like}>
         <img src={arrowUp} />
         {post.likes}
@@ -76,7 +77,7 @@ export const PostCard = (props) => {
       <span>
       <img src={baloon} onClick={() => goToCommentPage(navigate, post.id)}/>
       </span>
-      ??
+      {post.comments}
       </Comments>
       </DivLikeComments>
     </ContainerCard>

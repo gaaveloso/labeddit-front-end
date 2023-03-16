@@ -46,6 +46,8 @@ export const HomePage = () => {
     }
 
   };
+
+  console.log(posts)
   return (
     <Container>
     <Header />
