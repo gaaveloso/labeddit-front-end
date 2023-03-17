@@ -137,7 +137,7 @@ export const CommentsPage = () => {
             <span>
               <img src={baloon} />
             </span>
-            ??
+            {post?.comment}
           </Comments>
         </DivLikeComments>
       </ContainerCard>
