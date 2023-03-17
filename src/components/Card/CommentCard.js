@@ -57,6 +57,7 @@ export const CommentCard = (props) => {
     }
   };
   
+
   return (
     <ContainerCard>
       <p>Enviado por: {comment.creator.name}</p>
