@@ -1,4 +1,4 @@
-# Labeddit Fron-end
+# Labeddit Front-end
 
 # Sobre o projeto
 
