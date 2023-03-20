@@ -10,6 +10,16 @@ export const ContainerCard = styled.main`
   border-radius: 12px;
   padding-left: 15px;
   margin-top: 10px;
+  word-break: break-word;
+  
+  p {
+    font-size: 12px;
+    color: #6F6F6F;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
 `;
 
 export const LikeDislike = styled.div`

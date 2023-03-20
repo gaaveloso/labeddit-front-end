@@ -17,7 +17,7 @@ export const PostContainer = styled.div`
     display: flex;
     height: 250px;
     margin-top: 10px;
-    input {
+    textarea {
         width: 364px;
         height: 131px;
         background: #EDEDED;
@@ -25,6 +25,8 @@ export const PostContainer = styled.div`
         border: none;
         display: flex;
         margin-bottom: 15px;
+        padding-left: 20px;
+        padding-top: 10px;
     }
 
     button {

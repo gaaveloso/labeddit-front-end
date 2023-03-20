@@ -57,6 +57,8 @@ export const Input = styled.input`
   background-color: #ffffff;
   border: 1px solid #d5d8de;
   border-radius: 4px;
+  padding-left: 20px;
+
 `;
 
 export const DivStyled = styled.div`

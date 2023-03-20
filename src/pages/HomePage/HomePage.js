@@ -54,7 +54,10 @@ export const HomePage = () => {
     <PostContainer>
       <form onSubmit={createPost}>
         <section>
-          <input
+          <textarea
+          maxLength={150}
+          type="text"
+          wrap="hard"
           placeholder="Escreva seu post..."
           value={content}
           onChange={(e) => setContent(e.target.value)}

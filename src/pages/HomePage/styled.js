@@ -14,17 +14,19 @@ export const Container = styled.main`
 
 
 export const PostContainer = styled.div`
-    display: flex;
     height: 250px;
     margin-top: 10px;
-    input {
+    textarea {
         width: 364px;
         height: 131px;
         background: #EDEDED;
         border-radius: 12px;
         border: none;
-        display: flex;
+        display: block;
         margin-bottom: 15px;
+        padding-left: 20px;
+        padding-top: 10px;
+        word-break: break-word;
     }
 
     button {

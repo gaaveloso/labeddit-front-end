@@ -144,7 +144,10 @@ export const CommentsPage = () => {
       <PostContainer>
         <form onSubmit={createComment}>
           <section>
-            <input
+            <textarea
+              maxLength={150}
+              type="text"
+              wrap="hard"
               placeholder="Escreva seu comentário..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
